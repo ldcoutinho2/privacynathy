@@ -1,0 +1,190 @@
+<!-- index.html atualizado -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1032381935101857');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1032381935101857&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy | Natasha Steele</title>
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body { font-family: "Inter", sans-serif; }
+    .payment-overlay {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      z-index: 1000;
+      transition: left 0.5s ease-in-out;
+    }
+    .payment-overlay.active {
+      left: 0;
+    }
+    .payment-iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-center items-center h-16">
+      <img class="h-9 w-auto" src="images/privacy.svg" alt="Logo">
+    </div>
+  </div>
+</nav>
+
+<!-- Banner e Perfil -->
+<div class="relative max-w-3xl mx-auto rounded-bottom-3">
+  <img class="w-full h-64 object-cover" src="images/banner2.webp" alt="Banner">
+  <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+  <div class="absolute bottom-4 right-4 text-white">82 posts • 86k likes</div>
+  <div class="absolute -bottom-16 left-6">
+    <img class="h-24 w-24 rounded-full border-4 border-white object-cover" src="images/profile.webp" alt="Perfil">
+  </div>
+</div>
+
+<!-- Nome e @ -->
+<div class="max-w-3xl mx-auto mt-16 px-6">
+  <div>
+    <div class="flex items-center">
+      <h2 class="text-lg font-bold text-black">Natasha Steele
+</h2> 
+      <img class="h-5 w-5 ml-2" src="images/badge-check.svg" alt="Verificado">
+    </div>
+    <p class="text-sm text-gray-600">@natasha.stele</p> 
+  </div>
+</div>
+
+<!-- Detalhes -->
+<div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-4">
+  <p id="profile-details" class="text-gray-800 text-sm blurred">Meu amor… resistir pra quê? Você quer me ver, me ter, me gozar… e eu tô aqui só pra isso. 😈 Por um valor que nem dói, tu desbloqueia +800 conteúdos explícitos: 📸 Peladinha, brincando, provocando… 👯‍♀️ Sozinha, com amigas, sem vergonha e sem censura. 🎥 Vídeos quentes, fotos íntimas, fantasias e muito toque real. 🧠 Sua mente vai surtar… e sua mão não vai dar conta. 💬 Quer mais? Tem chat direto comigo. Fala tua vontade suja… e se for bom, a gente realiza JUNTINHO. 💻 E ainda rola chamada EXCLUSIVA — só eu e você, sem pressa. 👉 Assina agora, para de gozar na ilusão. Aqui é real, ao vivo e sem frescura. 💦</p>
+  <button id="toggleButton" class="mt-2 text-orange-500 hover:text-orange-600">Ver mais</button>
+
+  <!-- Redes sociais -->
+  <div class="flex space-x-3 mt-4">
+    <a href="https://app.pushinpay.com.br/service/pay/9F01488D-40C2-4B66-B30B-59D4BFBDF531" class="icon-circle"><img src="images/x.png" alt="X"></a>
+    <a href="https://app.pushinpay.com.br/service/pay/9F01488D-40C2-4B66-B30B-59D4BFBDF531" class="icon-circle"><img src="images/instagram.png" alt="Instagram"></a>
+    <a href="https://app.pushinpay.com.br/service/pay/9F01488D-40C2-4B66-B30B-59D4BFBDF531" class="icon-circle"><img src="images/tiktok.png" alt="TikTok"></a>
+  </div>
+
+  <!-- Assinatura -->
+  <br>
+  <h6 class="title-subscribe">ASSINATURAS</h6>
+  <a href="https://app.pushinpay.com.br/service/pay/9F01488D-40C2-4B66-B30B-59D4BFBDF531" target="_blank" class="subscribe-btn mt-2">
+    <span>Assinar (1 mês)</span>
+    <span>R$ 14,90 / mês</span>
+  <h6 class="title-subscribe">ASSINATURAS</h6>
+  <a href="https://app.pushinpay.com.br/service/pay/9F01488D-40C2-4B66-B30B-59D4BFBDF531" target="_blank" class="subscribe-btn mt-2">
+    <span>Assinar (3 meses)</span>
+    <span>R$ 19,90 / meses</span>
+  <h6 class="title-subscribe">ASSINATURAS</h6>
+  <a href="https://app.pushinpay.com.br/service/pay/9F01488D-40C2-4B66-B30B-59D4BFBDF531" target="_blank" class="subscribe-btn mt-2">
+    <span>Assinar (1 ano)</span>
+    <span>R$ 24,90 / 1 ano</span>
+    <h6 class="title-subscribe">ASSINATURAS</h6>
+  </a>
+
+  <div class="stats"><p>82 posts • 49 fotos • 33 vídeos</p></div>
+
+    <div class="video-container mt-4">
+      <video autoplay muted loop>
+        <source src="media/02.mp4" type="video/mp4">Seu navegador não suporta vídeos HTML5.
+      </video>
+    </div>
+    <img class="watermark" src="images/white-logo.png" alt="Marca d'água">
+  </div>
+
+ <div class="video-container mt-4">
+    <div class="blur">
+      <video autoplay muted loop>
+        <source src="media/01.mp4" type="video/mp4">Seu navegador não suporta vídeos HTML5.
+      </video>
+    </div>
+    <img class="watermark" src="images/white-logo.png" alt="Marca d'água">
+  </div>
+  
+    
+    <div class="image-container mt-4"><img src="images/foto2.webp" alt="Imagem"></div>
+
+  <div class="image-container mt-4"><div class="blur"><img src="images/5.webp" alt="Imagem"></div><img class="watermark" style="max-width: 200px" src="images/white-logo.png" alt="Marca d'água"></div>
+  <div class="image-container mt-4"><div class="blur"><img src="images/6.webp" alt="Imagem"></div><img class="watermark" style="max-width: 200px" src="images/white-logo.png" alt="Marca d'água"></div>
+  <div class="image-container mt-4"><div class="blur"><img src="images/7.webp" alt="Imagem"></div><img class="watermark" style="max-width: 200px" src="images/white-logo.png" alt="Marca d'água"></div>
+  </div>
+
+  <div class="stats"><p>82 posts • 49 fotos • 33 vídeos</p></div>
+
+  <footer>
+    <a href="https://app.pushinpay.com.br/service/pay/9F01488D-40C2-4B66-B30B-59D4BFBDF531">🔒 DESBLOQUEAR TODOS OS CONTEÚDOS 🔒</a>
+  </footer>
+</div>
+
+<script>
+  const toggleButton = document.getElementById("toggleButton");
+  const profileDetails = document.getElementById("profile-details");
+
+  toggleButton.addEventListener("click", function () {
+    if (profileDetails.classList.contains("blurred")) {
+      profileDetails.classList.remove("blurred");
+      toggleButton.textContent = "Ver menos";
+    } else {
+      profileDetails.classList.add("blurred");
+      toggleButton.textContent = "Ver mais";
+    }
+  });
+
+  // Eventos de clique para redirecionar com pixel
+  document.querySelectorAll("a[href]").forEach((a) => {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      try { fbq("track", "InitiateCheckout"); } catch {}
+      const utm = localStorage.getItem("myCustomUTMData");
+      let url = "https://app.pushinpay.com.br/service/pay/9F01488D-40C2-4B66-B30B-59D4BFBDF531";
+      if (utm) {
+        const params = JSON.parse(utm);
+        const pushUrl = new URL(url);
+        for (const key in params) {
+          pushUrl.searchParams.set(key, params[key]);
+        }
+        url = pushUrl.toString();
+      }
+      window.location.href = url;
+    });
+  });
+</script>
+
+</body>
+</html>
