@@ -72,10 +72,25 @@
       margin: 10px auto 0;
       display: block;
     }
+    .blurred {
+      max-height: 120px;
+      overflow: hidden;
+      position: relative;
+    }
+    .blurred::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 50px;
+      width: 100%;
+      background: linear-gradient(to top, white, transparent);
+    }
   </style>
 </head>
-
 <body class="bg-gray-100">
+<!-- ...restante do HTML continua normalmente... -->
+
 
 <!-- Navbar -->
 <nav class="bg-white shadow-md">
