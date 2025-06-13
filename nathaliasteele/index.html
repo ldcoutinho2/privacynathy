@@ -76,8 +76,6 @@
 </head>
 
 <body class="bg-gray-100">
-<!-- Resto do conteúdo mantido -->
-
 
 <!-- Navbar -->
 <nav class="bg-white shadow-md">
@@ -102,8 +100,7 @@
 <div class="max-w-3xl mx-auto mt-16 px-6">
   <div>
     <div class="flex items-center">
-      <h2 class="text-lg font-bold text-black">Natasha Steele
-</h2> 
+      <h2 class="text-lg font-bold text-black">Natasha Steele</h2> 
       <img class="h-5 w-5 ml-2" src="images/badge-check.svg" alt="Verificado">
     </div>
     <p class="text-sm text-gray-600">@natasha.stele</p> 
@@ -128,41 +125,43 @@
   <a href="https://go.tribopay.com.br/y85i72rn4o" target="_blank" class="subscribe-btn mt-2">
     <span>Assinar (1 mês)</span>
     <span>R$ 14,90 / mês</span>
-  <h6 class="title-subscribe">ASSINATURAS</h6>
+  </a>
   <a href="https://go.tribopay.com.br/xjlou" target="_blank" class="subscribe-btn mt-2">
     <span>Assinar (3 meses)</span>
     <span>R$ 19,90 / meses</span>
-  <h6 class="title-subscribe">ASSINATURAS</h6>
+  </a>
   <a href="https://go.tribopay.com.br/3uqtg" target="_blank" class="subscribe-btn mt-2">
     <span>Assinar (1 ano)</span>
     <span>R$ 24,90 / 1 ano</span>
-    <h6 class="title-subscribe">ASSINATURAS</h6>
   </a>
 
   <div class="stats"><p>82 posts • 49 fotos • 33 vídeos</p></div>
 
-    <div class="video-container mt-4">
-      <video autoplay muted loop>
-        <source src="media/02.mp4" type="video/mp4">Seu navegador não suporta vídeos HTML5.
-      </video>
-    </div>
+  <div class="video-container mt-4">
+    <video autoplay muted loop>
+      <source src="media/02.mp4" type="video/mp4">Seu navegador não suporta vídeos HTML5.
+    </video>
     <img class="watermark" src="images/white-logo.png" alt="Marca d'água">
   </div>
 
- <div class="video-container mt-4">
-    <div class="blur">
-      <video autoplay muted loop>
-        <source src="media/01.mp4" type="video/mp4">Seu navegador não suporta vídeos HTML5.
-      </video>
-    </div>
+  <div class="video-container mt-4">
+    <video autoplay muted loop>
+      <source src="media/01.mp4" type="video/mp4">Seu navegador não suporta vídeos HTML5.
+    </video>
     <img class="watermark" src="images/white-logo.png" alt="Marca d'água">
   </div>
-  
-    
 
-  <div class="image-container mt-4"><div class="blur"><img src="images/5.webp" alt="Imagem"></div><img class="watermark" style="max-width: 200px" src="images/white-logo.png" alt="Marca d'água"></div>
-  <div class="image-container mt-4"><div class="blur"><img src="images/6.webp" alt="Imagem"></div><img class="watermark" style="max-width: 200px" src="images/white-logo.png" alt="Marca d'água"></div>
-  <div class="image-container mt-4"><div class="blur"><img src="images/7.webp" alt="Imagem"></div><img class="watermark" style="max-width: 200px" src="images/white-logo.png" alt="Marca d'água"></div>
+  <div class="image-container mt-4">
+    <img src="images/5.webp" alt="Imagem">
+    <img class="watermark" style="max-width: 200px" src="images/white-logo.png" alt="Marca d'água">
+  </div>
+  <div class="image-container mt-4">
+    <img src="images/6.webp" alt="Imagem">
+    <img class="watermark" style="max-width: 200px" src="images/white-logo.png" alt="Marca d'água">
+  </div>
+  <div class="image-container mt-4">
+    <img src="images/7.webp" alt="Imagem">
+    <img class="watermark" style="max-width: 200px" src="images/white-logo.png" alt="Marca d'água">
   </div>
 
   <div class="stats"><p>82 posts • 49 fotos • 33 vídeos</p></div>
@@ -186,7 +185,6 @@
     }
   });
 
-  // Eventos de clique para redirecionar com pixel
   document.querySelectorAll("a[href]").forEach((a) => {
     a.addEventListener("click", (e) => {
       e.preventDefault();
