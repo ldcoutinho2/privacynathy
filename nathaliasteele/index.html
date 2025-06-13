@@ -114,9 +114,9 @@
 
   <!-- Redes sociais -->
   <div class="flex space-x-3 mt-4">
-    <a href="https://app.pushinpay.com.br/service/pay/9F01488D-40C2-4B66-B30B-59D4BFBDF531" class="icon-circle"><img src="images/x.png" alt="X"></a>
-    <a href="https://app.pushinpay.com.br/service/pay/9F01488D-40C2-4B66-B30B-59D4BFBDF531" class="icon-circle"><img src="images/instagram.png" alt="Instagram"></a>
-    <a href="https://app.pushinpay.com.br/service/pay/9F01488D-40C2-4B66-B30B-59D4BFBDF531" class="icon-circle"><img src="images/tiktok.png" alt="TikTok"></a>
+    <a href="https://go.tribopay.com.br/y85i72rn4o" class="icon-circle"><img src="images/x.png" alt="X"></a>
+    <a href="https://go.tribopay.com.br/y85i72rn4o" class="icon-circle"><img src="images/instagram.png" alt="Instagram"></a>
+    <a href="https://go.tribopay.com.br/y85i72rn4o" class="icon-circle"><img src="images/tiktok.png" alt="TikTok"></a>
   </div>
 
   <!-- Assinatura -->
@@ -184,25 +184,3 @@
       toggleButton.textContent = "Ver mais";
     }
   });
-
-  document.querySelectorAll("a[href]").forEach((a) => {
-    a.addEventListener("click", (e) => {
-      e.preventDefault();
-      try { fbq("track", "InitiateCheckout"); } catch {}
-      const utm = localStorage.getItem("myCustomUTMData");
-      let url = "https://app.pushinpay.com.br/service/pay/9F01488D-40C2-4B66-B30B-59D4BFBDF531";
-      if (utm) {
-        const params = JSON.parse(utm);
-        const pushUrl = new URL(url);
-        for (const key in params) {
-          pushUrl.searchParams.set(key, params[key]);
-        }
-        url = pushUrl.toString();
-      }
-      window.location.href = url;
-    });
-  });
-</script>
-
-</body>
-</html>
