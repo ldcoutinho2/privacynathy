@@ -130,37 +130,70 @@
 
     <div class="stats text-center mt-2"><p>82 posts • 49 fotos • 33 vídeos</p></div>
 
-    <!-- Conteúdo -->
-<div class="video-container mt-4">
-    <video autoplay muted loop>
-      <source src="media/02.mp4" type="video/mp4">Seu navegador não suporta vídeos HTML5.
-    </video>
-    <img class="watermark" src="images/white-logo.png" alt="Marca d'água">
+   <style>
+  .relative {
+    position: relative;
+    display: inline-block;
+  }
+
+  .watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0.3;
+    max-width: 30%;
+    max-height: 30%;
+  }
+</style>
+
+<!-- CONTEÚDOS -->
+<div class="grid mt-4">
+  <div class="relative">
+    <div class="blurred">
+      <video autoplay muted loop>
+        <source src="media/01.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <img src="images/white-logo.png" class="watermark" />
   </div>
 
-  <div class="video-container mt-4">
-    <div class="blur">
-    <video autoplay muted loop>
-      <source src="media/01.mp4" type="video/mp4">Seu navegador não suporta vídeos HTML5.
-    </video>
-    <img class="watermark" src="images/white-logo.png" alt="Marca d'água">
+  <div class="relative">
+    <div class="blurred">
+      <video autoplay muted loop>
+        <source src="media/02.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <img src="images/white-logo.png" class="watermark" />
+  </div>
+</div>
+
+<div class="grid mt-4">
+  <div class="relative">
+    <div class="blurred">
+      <img src="images/5.webp" />
+    </div>
+    <img src="images/white-logo.png" class="watermark" />
   </div>
 
-  <div class="image-container mt-4">
-    <div class="blur">
-    <img src="images/5.webp" alt="Imagem">
-    <img class="watermark" style="max-width: 200px" src="images/white-logo.png" alt="Marca d'água">
+  <div class="relative">
+    <div class="blurred">
+      <img src="images/6.webp" />
+    </div>
+    <img src="images/white-logo.png" class="watermark" />
   </div>
-  <div class="image-container mt-4">
-    <div class="blur">
-    <img src="images/6.webp" alt="Imagem">
-    <img class="watermark" style="max-width: 200px" src="images/white-logo.png" alt="Marca d'água">
+</div>
+
+<div class="grid mt-4">
+  <div class="relative">
+    <div class="blurred">
+      <img src="images/7.webp" />
+    </div>
+    <img src="images/white-logo.png" class="watermark" />
   </div>
-  <div class="image-container mt-4">
-    <div class="blur">
-    <img src="images/7.webp" alt="Imagem">
-    <img class="watermark" style="max-width: 200px" src="images/white-logo.png" alt="Marca d'água">
-  </div>
+</div>
+
 
 
     <!-- COMENTÁRIOS FAKE -->
