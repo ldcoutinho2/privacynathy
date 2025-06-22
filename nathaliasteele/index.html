@@ -1,85 +1,57 @@
+<!-- index.html atualizado -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy | Natasha Steele</title>
+  <title>Privacy + Chamada de Vídeo | Natasha Steele 🔥</title>
 
-  <link rel="icon" type="image/png" href="images/logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/logo.png">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/style.css">
 
   <style>
-    body { font-family: "Inter", sans-serif; }
-    .video-container,
-    .image-container {
-      background: white;
-      border-radius: 12px;
-      padding: 10px;
-      margin-top: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .video-container video,
-    .image-container img {
-      width: 100%;
-      border-radius: 10px;
+    body { font-family: 'Inter', sans-serif; background: #f3f4f6; }
+    .subscribe-btn {
       display: block;
+      background-color: #f97316;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 8px;
     }
-    .watermark {
-      max-width: 150px;
-      margin: 10px auto 0;
-      display: block;
-    }
-    .blurred {
-      max-height: 120px;
-      overflow: hidden;
-      position: relative;
-    }
-    .blurred::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 50px;
-      width: 100%;
-      background: linear-gradient(to top, white, transparent);
-    }
-    .grid-videos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
-      gap: 10px;
-    }
+    .subscribe-btn:hover { background-color: #ea580c; }
+    .badge { background: #f97316; color: white; padding: 2px 6px; border-radius: 4px; font-size: 12px; margin-left: 6px; }
+    .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .comment-box { background: white; border-radius: 8px; padding: 10px; margin-top: 8px; }
   </style>
 </head>
 
-<body class="bg-gray-100">
+<body>
 
 <!-- Navbar -->
-<nav class="bg-white shadow-md">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-center items-center h-16">
-      <img class="h-9 w-auto" src="images/privacy.svg" alt="Logo">
-    </div>
+<nav class="bg-white shadow">
+  <div class="max-w-3xl mx-auto p-4 flex justify-center">
+    <img src="images/privacy.svg" class="h-9" alt="Logo">
   </div>
 </nav>
 
-<!-- Banner e Perfil -->
-<div class="relative max-w-3xl mx-auto rounded-bottom-3">
-  <img class="w-full h-64 object-cover" src="images/banner2.png" alt="Banner">
-  <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-  <div class="absolute bottom-4 right-4 text-white">82 posts • 86k likes</div>
+<!-- Banner -->
+<div class="relative max-w-3xl mx-auto">
+  <img src="images/banner2.png" class="w-full h-64 object-cover">
+  <div class="absolute bottom-4 right-4 text-white text-sm">82 posts • 86k likes</div>
   <div class="absolute -bottom-16 left-6">
-    <img class="h-24 w-24 rounded-full border-4 border-white object-cover" src="images/perfil2.png" alt="Perfil">
+    <img src="images/perfil2.png" class="h-24 w-24 rounded-full border-4 border-white object-cover">
   </div>
 </div>
 
-<!-- Nome e @ -->
-<div class="max-w-3xl mx-auto mt-16 px-6">
+<!-- Perfil -->
+<div class="max-w-3xl mx-auto mt-20 px-6">
   <div>
     <div class="flex items-center">
-      <h2 class="text-lg font-bold text-black">Natasha Steele</h2>
-      <img class="h-5 w-5 ml-2" src="images/badge-check.svg" alt="Verificado">
+      <h2 class="text-lg font-bold">Natasha Steele</h2>
+      <img src="images/badge-check.svg" class="h-5 w-5 ml-2">
     </div>
     <p class="text-sm text-gray-600">@natasha.stele</p>
   </div>
@@ -87,90 +59,71 @@
 
 <!-- Descrição -->
 <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-4">
-  <p id="profile-details" class="text-gray-800 text-sm blurred">Meu amor… resistir pra quê? Você quer me ver, me ter, me gozar… e eu tô aqui só pra isso. 😈 Desbloqueia +800 conteúdos: fotos peladinha, vídeos se tocando, chamada ao vivo e muito mais. 💦</p>
-  <button id="toggleButton" class="mt-2 text-orange-500 hover:text-orange-600">Ver mais</button>
+  <p class="text-sm text-gray-800">
+    🔥 +800 conteúdos explícitos! <br>
+    📸 Fotos nuas, vídeos se tocando e com amigas...<br>
+    🎥 + Chamada de vídeo privada, peladinha AO VIVO!<br>
+    💦 Tudo SEM CENSURA, real, direto comigo.<br><br>
+    👉 Se tu tá aqui é porque quer me ver de verdade... então PARA DE GOZAR NA ILUSÃO e vem pro PRIVACY AGORA! 😈
+  </p>
 </div>
 
-<!-- Redes Sociais -->
-<div class="flex space-x-3 mt-4 justify-center">
-  <a href="#"><img src="images/x.png" class="w-8"></a>
-  <a href="#"><img src="images/instagram.png" class="w-8"></a>
-  <a href="#"><img src="images/tiktok.png" class="w-8"></a>
+<!-- ASSINATURAS -->
+<div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-4">
+  <h3 class="text-lg font-bold text-center mb-4">🔥 ACESSO COMPLETO + CHAMADA AO VIVO 🔥</h3>
+
+  <a href="https://app.pushinpay.com.br/service/pay/1MES"
+     class="subscribe-btn">1 Mês — R$ 14,90</a>
+
+  <a href="https://app.pushinpay.com.br/service/pay/3MESES"
+     class="subscribe-btn">3 Meses — R$ 19,90 
+     <span class="badge">MAIS VENDIDO + VídeoChamada 5min</span>
+  </a>
+
+  <a href="https://app.pushinpay.com.br/service/pay/VITALICIO"
+     class="subscribe-btn">Acesso Vitalício — R$ 24,90 + VídeoChamada 10min</a>
 </div>
 
-<!-- Planos -->
-<div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-6">
-  <h6 class="text-lg font-bold">ASSINATURAS</h6>
-  <a href="#" class="subscribe-btn mt-2">1 mês - R$ 14,90</a>
-  <a href="#" class="subscribe-btn mt-2">3 meses - R$ 19,90</a>
-  <a href="#" class="subscribe-btn mt-2">1 ano - R$ 24,90</a>
-</div>
+<!-- Conteúdos -->
+<div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-4">
+  <h4 class="font-bold text-lg mb-2">💦 Prévia dos Conteúdos:</h4>
 
-<!-- Videos -->
-<div class="max-w-3xl mx-auto grid-videos mt-6">
-  <div class="video-container blurred">
-    <video autoplay muted loop>
-      <source src="media/01.mp4" type="video/mp4">
-    </video>
-    <img class="watermark" src="images/white-logo.png">
+  <div class="video-grid">
+    <div>
+      <div class="blur">
+        <video autoplay muted loop><source src="media/01.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div>
+      <div class="blur">
+        <video autoplay muted loop><source src="media/02.mp4" type="video/mp4"></video>
+      </div>
+    </div>
   </div>
-  <div class="video-container blurred">
-    <video autoplay muted loop>
-      <source src="media/02.mp4" type="video/mp4">
-    </video>
-    <img class="watermark" src="images/white-logo.png">
-  </div>
-</div>
 
-<!-- Imagens -->
-<div class="max-w-3xl mx-auto grid-videos mt-6">
-  <div class="image-container blurred">
-    <img src="images/5.webp">
-    <img class="watermark" src="images/white-logo.png">
-  </div>
-  <div class="image-container blurred">
-    <img src="images/6.webp">
-    <img class="watermark" src="images/white-logo.png">
+  <div class="mt-4 grid grid-cols-3 gap-2">
+    <div class="blur"><img src="images/5.webp"></div>
+    <div class="blur"><img src="images/6.webp"></div>
+    <div class="blur"><img src="images/7.webp"></div>
   </div>
 </div>
 
 <!-- Comentários -->
-<div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-6">
-  <h2 class="text-lg font-bold mb-4">🔥 O que tão falando...</h2>
-  <div class="space-y-4">
-    <div class="bg-gray-100 p-3 rounded">
-      <p class="text-sm text-black">“Mano... surreal... achei que era meme... mas quando desbloqueei quase desmaiei 😳🔥”</p>
-    </div>
-    <div class="bg-gray-100 p-3 rounded">
-      <p class="text-sm text-black">“MDS... ela na chamada ao vivo peladinha se tocando... eu gozei 3x sem parar kkkkk 😈”</p>
-    </div>
-    <div class="bg-gray-100 p-3 rounded">
-      <p class="text-sm text-black">“Valeu cada centavo... é muita putaria meu parceiro 🔥 sem censura, real...”</p>
-    </div>
-    <div class="bg-gray-100 p-3 rounded">
-      <p class="text-sm text-black">“Peguei o plano vitalício... agr ela é minha kkkkkk 😏💦”</p>
-    </div>
-  </div>
+<div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-4">
+  <h4 class="font-bold text-lg mb-2">📢 O QUE ESTÃO FALANDO:</h4>
+
+  <div class="comment-box">🔥 “Melhor investimento da minha vida... peguei o vitalício e ainda gozei AO VIVO com ela...”</div>
+  <div class="comment-box">💦 “Sem palavras... os vídeos são insanos e a chamada... meu Deus, Nathy você é perfeita!”</div>
+  <div class="comment-box">😈 “Paguei desconfiado... mas quando vi... caralho... ela ao vivo só pra mim peladinha...”</div>
 </div>
 
 <!-- Footer -->
-<footer class="text-center p-6">
-  <a href="#">🔒 DESBLOQUEAR TODOS OS CONTEÚDOS 🔒</a>
+<footer class="max-w-3xl mx-auto text-center p-4 text-xs text-gray-500">
+  🔒 Acesso Privado e Seguro — Nenhum vínculo com Instagram, Meta ou qualquer rede social.
 </footer>
 
-<script>
-  const toggleButton = document.getElementById("toggleButton");
-  const profileDetails = document.getElementById("profile-details");
-  toggleButton.addEventListener("click", function () {
-    if (profileDetails.classList.contains("blurred")) {
-      profileDetails.classList.remove("blurred");
-      toggleButton.textContent = "Ver menos";
-    } else {
-      profileDetails.classList.add("blurred");
-      toggleButton.textContent = "Ver mais";
-    }
-  });
-</script>
+</body>
+</html>
 
 </body>
 </html>
