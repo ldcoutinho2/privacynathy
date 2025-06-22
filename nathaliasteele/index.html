@@ -139,16 +139,18 @@
 <h6 class="title-subscribe">ASSINATURAS</h6>
 
 <style>
+  /* Selo piscante vermelho para destacar */
   .most-sold {
     display: inline-block;
-    background: #ff0000;
+    background: #ff3c00; /* vermelho forte próximo do laranja */
     color: white;
-    font-weight: bold;
-    padding: 4px 10px;
+    font-weight: 700;
+    padding: 4px 12px;
     border-radius: 20px;
     margin-bottom: 8px;
     animation: blink 1.2s linear infinite;
     font-size: 14px;
+    font-family: inherit;
   }
 
   @keyframes blink {
@@ -156,44 +158,23 @@
     25%, 75% { opacity: 0; }
   }
 
-  .subscribe-btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #222;
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 18px;
-    margin-top: 10px;
-    transition: background 0.3s ease;
-  }
-  .subscribe-btn:hover {
-    background: #444;
-  }
-
-  .subscribe-btn span {
-    display: block;
-  }
-
+  /* Texto pequeno da chamada dentro do botão */
   .call-time {
     font-size: 14px;
-    color: #ccc;
+    color: #fff; /* branco para combinar com o texto do botão */
+    display: block;
     margin-top: 4px;
   }
 </style>
 
-<!-- Selo piscando "Mais vendido" acima do plano 1 -->
+<!-- Selo piscante "Mais vendido" acima do plano 1 -->
 <div class="most-sold">Mais vendido</div>
 <a href="https://app.pushinpay.com.br/service/pay/9F225D94-643E-4E38-9AC5-A9D04C56F34D" 
    onclick="fbq('track', 'InitiateCheckout')" 
    target="_blank" 
    class="subscribe-btn mt-2">
-  <div>
-    <span>Assinar (1 mês)</span>
-    <span class="call-time">Chamada de 5 minutos inclusa</span>
-  </div>
+  <span>Assinar (1 mês)</span>
+  <span class="call-time">Chamada de 5 minutos inclusa</span>
   <span>R$ 14,90 / mês</span>
 </a>
 
@@ -201,10 +182,8 @@
    onclick="fbq('track', 'InitiateCheckout')" 
    target="_blank" 
    class="subscribe-btn mt-2">
-  <div>
-    <span>Assinar (3 meses)</span>
-    <span class="call-time">Chamada de 10 minutos inclusa</span>
-  </div>
+  <span>Assinar (3 meses)</span>
+  <span class="call-time">Chamada de 10 minutos inclusa</span>
   <span>R$ 19,90 / meses</span>
 </a>
 
@@ -212,10 +191,8 @@
    onclick="fbq('track', 'InitiateCheckout')" 
    target="_blank" 
    class="subscribe-btn mt-2">
-  <div>
-    <span>Assinar (1 ano)</span>
-    <span class="call-time">Chamada de 20 minutos inclusa</span>
-  </div>
+  <span>Assinar (1 ano)</span>
+  <span class="call-time">Chamada de 20 minutos inclusa</span>
   <span>R$ 24,90 / 1 ano</span>
 </a>
 
