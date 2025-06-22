@@ -1,3 +1,4 @@
+<!-- index.html atualizado -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -20,380 +21,199 @@
   </noscript>
   <!-- End Meta Pixel Code -->
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy | Nathy Oficial 🔥</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy | Natasha Steele</title>
 
-  <link rel="icon" type="image/png" href="images/logo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
 
   <style>
-    body {
-      font-family: "Inter", sans-serif;
-      background: #f3f4f6;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Navbar */
-    nav {
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
-    }
-
-    /* Banner */
-    .banner-container {
-      position: relative;
-      max-width: 768px;
-      margin: 1.5rem auto 0;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .banner-container img.banner-img {
+    body { font-family: "Inter", sans-serif; }
+    .payment-overlay {
+      position: fixed;
+      top: 0;
+      left: -100%;
       width: 100%;
-      height: 16rem;
-      object-fit: cover;
-      display: block;
+      height: 100%;
+      background-color: white;
+      z-index: 1000;
+      transition: left 0.5s ease-in-out;
     }
-    .banner-stats {
-      position: absolute;
-      bottom: 1rem;
-      right: 1rem;
-      color: white;
-      font-weight: 600;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-      font-size: 0.9rem;
+    .payment-overlay.active {
+      left: 0;
     }
-    .profile-picture {
-      position: absolute;
-      bottom: -3rem;
-      left: 1.5rem;
-      width: 6rem;
-      height: 6rem;
-      border-radius: 9999px;
-      border: 4px solid white;
-      object-fit: cover;
-      background: white;
-    }
-
-    /* Perfil */
-    .profile-info {
-      max-width: 768px;
-      margin: 4rem auto 0.5rem;
-      padding: 0 1.5rem;
-    }
-    .profile-info h2 {
-      font-size: 1.125rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .profile-info p.handle {
-      font-size: 0.875rem;
-      color: #4b5563; /* gray-600 */
-      margin-top: 0.125rem;
-    }
-    .profile-info img.badge {
-      width: 1.25rem;
-      height: 1.25rem;
-    }
-
-    /* Descrição */
-    .description-container {
-      max-width: 768px;
-      margin: 1.5rem auto 0;
-      background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
-      font-size: 0.9rem;
-      color: #1f2937; /* gray-800 */
-      line-height: 1.5;
-      position: relative;
-    }
-    .description-container.blurred {
-      filter: blur(6px);
-    }
-    #toggleButton {
-      margin-top: 0.5rem;
-      color: #f97316; /* orange-500 */
-      cursor: pointer;
-      font-weight: 600;
-      background: none;
+    .payment-iframe {
       border: none;
-      padding: 0;
-    }
-    #toggleButton:hover {
-      color: #ea580c; /* orange-600 */
-    }
-
-    /* Redes sociais */
-    .social-links {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .social-links a img {
-      height: 1.5rem;
-      width: auto;
-    }
-
-    /* Planos */
-    .plans-container {
-      max-width: 400px;
-      margin: 2rem auto 0;
-      padding: 0 1rem;
-    }
-    .plans-container h6 {
-      font-weight: 700;
-      font-size: 1.125rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    .plan-btn {
-      display: block;
-      background-color: #f97316; /* orange-500 */
-      color: white;
-      border-radius: 0.5rem;
-      padding: 0.75rem 1rem;
-      margin-bottom: 0.75rem;
-      font-weight: 600;
-      text-align: center;
-      text-decoration: none;
-      transition: background-color 0.2s ease-in-out;
-      position: relative;
-      font-size: 1rem;
-    }
-    .plan-btn:hover {
-      background-color: #ea580c; /* orange-600 */
-    }
-    .badge {
-      background-color: red;
-      color: white;
-      padding: 2px 8px;
-      font-size: 12px;
-      border-radius: 9999px;
-      animation: blink 1s infinite;
+      width: 100%;
+      height: 100%;
       position: absolute;
-      top: -10px;
-      left: 10px;
-      font-weight: 700;
-      user-select: none;
+      top: 0;
+      left: 0;
     }
-    @keyframes blink {
-      0%, 50%, 100% {
-        opacity: 1;
-      }
-      25%, 75% {
-        opacity: 0;
-      }
+    .video-container,
+    .image-container {
+      background: white;
+      border-radius: 12px;
+      padding: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-
-    /* Conteúdos - marcas d'água */
-    .relative {
-      position: relative;
-      display: inline-block;
+    .video-container video,
+    .image-container img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
     }
     .watermark {
+      max-width: 150px;
+      margin: 10px auto 0;
+      display: block;
+    }
+    .blurred {
+      max-height: 120px;
+      overflow: hidden;
+      position: relative;
+    }
+    .blurred::after {
+      content: "";
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      opacity: 0.3;
-      max-width: 30%;
-      max-height: 30%;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      max-width: 768px;
-      margin: 2rem auto;
-    }
-
-    /* Comentários */
-    .comments {
-      max-width: 768px;
-      margin: 2rem auto;
-      background: #f3f4f6;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgb(0 0 0 / 0.05);
-      font-size: 0.9rem;
-      color: #374151;
-    }
-
-    /* Footer */
-    footer {
-      margin: 2rem auto 3rem;
-      text-align: center;
-      font-weight: 600;
-      color: #f97316;
-    }
-    footer a {
-      text-decoration: none;
-      color: inherit;
-    }
-    footer a:hover {
-      text-decoration: underline;
+      bottom: 0;
+      left: 0;
+      height: 50px;
+      width: 100%;
+      background: linear-gradient(to top, white, transparent);
     }
   </style>
 </head>
-<body>
-  <!-- NAVBAR -->
-  <nav>
-    <div class="max-w-7xl mx-auto px-4 flex justify-center h-16 items-center">
-      <img class="h-9" src="images/privacy.svg" alt="Logo" />
-    </div>
-  </nav>
+<body class="bg-gray-100">
+<!-- ...restante do HTML continua normalmente... -->
 
-  <!-- BANNER -->
-  <div class="banner-container">
-    <img src="images/banner2.png" alt="Banner" class="banner-img" />
-    <div class="banner-stats">82 posts • 49 fotos • 33 vídeos</div>
-    <img src="images/perfil2.png" alt="Perfil" class="profile-picture" />
-  </div>
 
-  <!-- PERFIL -->
-  <section class="profile-info" aria-label="Informações do perfil">
-    <div>
-      <h2>
-        Nathy Oficial 🔥
-        <img src="images/badge-check.svg" alt="Verificado" class="badge" />
-      </h2>
-      <p class="handle">@nathy.oficial</p>
-    </div>
-  </section>
-
-  <!-- DESCRIÇÃO -->
-  <section class="description-container blurred" id="profile-details">
-    Meu amor... aqui não tem enrolação não 🔥 <br />
-    Desbloqueia agora +800 conteúdos explícitos meus e das minhas amigas: <br />
-    📸 Peladinha, se tocando, fazendo oral, de 4... <br />
-    🎥 Vídeos íntimos, sem censura, sem corte... <br />
-    💻 E ainda tem CHAMADA DE VÍDEO AO VIVO COMIGO 😈 <br />
-    👉 Desbloqueia agora... Para de sonhar e vem me ver peladinha AGORA!
-  </section>
-  <button id="toggleButton">Ver mais</button>
-
-  <!-- REDES SOCIAIS -->
-  <div class="social-links max-w-3xl mx-auto px-6">
-    <a href="#"><img src="images/x.png" alt="X" /></a>
-    <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
-    <a href="#"><img src="images/tiktok.png" alt="TikTok" /></a>
-  </div>
-
-  <!-- PLANOS -->
-  <div class="plans-container">
-    <h6>ESCOLHA SEU PLANO 🔥</h6>
-
-    <div class="relative mb-4">
-      <div class="badge">MAIS VENDIDO</div>
-      <a
-        href="https://app.pushinpay.com.br/#/service/pay/9F01488D-40C2-4B66-B30B-59D4BFBDF531"
-        class="plan-btn"
-        onclick="fbq('track', 'InitiateCheckout')"
-        target="_blank"
-        rel="noopener noreferrer"
-        >🔥 1 Mês - R$ 14,90 + Chamada de 5 MIN</a
-      >
-    </div>
-
-    <a
-      href="https://app.pushinpay.com.br/#/service/pay/9F014937-B27F-43D6-BD04-7808C16FE78B"
-      class="plan-btn"
-      onclick="fbq('track', 'InitiateCheckout')"
-      target="_blank"
-      rel="noopener noreferrer"
-      >🔥 3 Meses - R$ 19,90 + Chamada de 10 MIN</a
-    >
-
-    <a
-      href="https://app.pushinpay.com.br/#/service/pay/9F0149FB-1AC4-4E47-AE2F-C2E7B38FBDEA"
-      class="plan-btn"
-      onclick="fbq('track', 'InitiateCheckout')"
-      target="_blank"
-      rel="noopener noreferrer"
-      >🔥 Vitalício - R$ 39,90 + Chamada Até Gozar</a
-    >
-  </div>
-
-  <!-- CONTEÚDOS -->
-  <div class="grid">
-    <div class="relative">
-      <div class="blurred">
-        <video autoplay muted loop>
-          <source src="media/01.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <img src="images/white-logo.png" alt="Marca d'água" class="watermark" />
-    </div>
-
-    <div class="relative">
-      <div class="blurred">
-        <video autoplay muted loop>
-          <source src="media/02.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <img src="images/white-logo.png" alt="Marca d'água" class="watermark" />
+<!-- Navbar -->
+<nav class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-center items-center h-16">
+      <img class="h-9 w-auto" src="images/privacy.svg" alt="Logo">
     </div>
   </div>
+</nav>
 
-  <div class="grid">
-    <div class="relative">
-      <div class="blurred">
-        <img src="images/5.webp" alt="Imagem 5" />
-      </div>
-      <img src="images/white-logo.png" alt="Marca d'água" class="watermark" />
-    </div>
+<!-- Banner e Perfil -->
+<div class="relative max-w-3xl mx-auto rounded-bottom-3">
+  <img class="w-full h-64 object-cover" src="images/banner2.png" alt="Banner">
+  <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+  <div class="absolute bottom-4 right-4 text-white">82 posts • 86k likes</div>
+  <div class="absolute -bottom-16 left-6">
+    <img class="h-24 w-24 rounded-full border-4 border-white object-cover" src="images/perfil2.png" alt="Perfil">
+  </div>
+</div>
 
-    <div class="relative">
-      <div class="blurred">
-        <img src="images/6.webp" alt="Imagem 6" />
-      </div>
-      <img src="images/white-logo.png" alt="Marca d'água" class="watermark" />
+<!-- Nome e @ -->
+<div class="max-w-3xl mx-auto mt-16 px-6">
+  <div>
+    <div class="flex items-center">
+      <h2 class="text-lg font-bold text-black">Natasha Steele</h2> 
+      <img class="h-5 w-5 ml-2" src="images/badge-check.svg" alt="Verificado">
     </div>
+    <p class="text-sm text-gray-600">@natasha.stele</p> 
+  </div>
+</div>
+
+<!-- Detalhes -->
+<div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-4">
+  <p id="profile-details" class="text-gray-800 text-sm blurred">Meu amor… resistir pra quê? Você quer me ver, me ter, me gozar… e eu tô aqui só pra isso. 😈 Por um valor que nem dói, tu desbloqueia +800 conteúdos explícitos: 📸 Peladinha, brincando, provocando… 👯‍♀️ Sozinha, com amigas, sem vergonha e sem censura. 🎥 Vídeos quentes, fotos íntimas, fantasias e muito toque real. 🧠 Sua mente vai surtar… e sua mão não vai dar conta. 💬 Quer mais? Tem chat direto comigo. Fala tua vontade suja… e se for bom, a gente realiza JUNTINHO. 💻 E ainda rola chamada EXCLUSIVA — só eu e você, sem pressa. 👉 Assina agora, para de gozar na ilusão. Aqui é real, ao vivo e sem frescura. 💦</p>
+  <button id="toggleButton" class="mt-2 text-orange-500 hover:text-orange-600">Ver mais</button>
+
+  <!-- Redes sociais -->
+  <div class="flex space-x-3 mt-4">
+    <a href="https://go.tribopay.com.br/y85i72rn4o" class="icon-circle"><img src="images/x.png" alt="X"></a>
+    <a href="https://go.tribopay.com.br/y85i72rn4o" class="icon-circle"><img src="images/instagram.png" alt="Instagram"></a>
+    <a href="https://go.tribopay.com.br/y85i72rn4o" class="icon-circle"><img src="images/tiktok.png" alt="TikTok"></a>
   </div>
 
-  <div class="grid">
-    <div class="relative">
-      <div class="blurred">
-        <img src="images/7.webp" alt="Imagem 7" />
-      </div>
-      <img src="images/white-logo.png" alt="Marca d'água" class="watermark" />
-    </div>
+ <!-- Assinatura -->
+<br>
+<h6 class="title-subscribe">ASSINATURAS</h6>
+
+<a href="https://app.pushinpay.com.br/service/pay/9F225D94-643E-4E38-9AC5-A9D04C56F34D" 
+   onclick="fbq('track', 'InitiateCheckout')" 
+   target="_blank" 
+   class="subscribe-btn mt-2">
+  <span>Assinar (1 mês)</span>
+  <span>R$ 14,90 / mês</span>
+</a>
+
+<a href="https://app.pushinpay.com.br/service/pay/9F25BE2D-AA4B-4F6B-ADD7-F7C9D7BF75D0" 
+   onclick="fbq('track', 'InitiateCheckout')" 
+   target="_blank" 
+   class="subscribe-btn mt-2">
+  <span>Assinar (3 meses)</span>
+  <span>R$ 19,90 / meses</span>
+</a>
+
+<a href="https://app.pushinpay.com.br/service/pay/9F25BEA3-981E-4AAA-BEAC-ADF1435F0C3B" 
+   onclick="fbq('track', 'InitiateCheckout')" 
+   target="_blank" 
+   class="subscribe-btn mt-2">
+  <span>Assinar (1 ano)</span>
+  <span>R$ 24,90 / 1 ano</span>
+</a>
+
+
+  <div class="stats"><p>82 posts • 49 fotos • 33 vídeos</p></div>
+
+  <div class="video-container mt-4">
+    <video autoplay muted loop>
+      <source src="media/02.mp4" type="video/mp4">Seu navegador não suporta vídeos HTML5.
+    </video>
+    <img class="watermark" src="images/white-logo.png" alt="Marca d'água">
   </div>
 
-  <!-- COMENTÁRIOS FAKE -->
-  <div class="comments">
-    <h3 class="font-bold mb-2">💬 O que estão dizendo...</h3>
-    <p>🔥 "Manooo... vale cada centavo, ela é MUITO gostosa!!!"</p>
-    <p>🔥 "Achei que era fake... quando ela entrou na chamada eu quase gozei na hora 😈"</p>
-    <p>🔥 "Sem palavras... vídeos insanos, e a chamada? Perfeita"</p>
+  <div class="video-container mt-4">
+    <div class="blur">
+    <video autoplay muted loop>
+      <source src="media/01.mp4" type="video/mp4">Seu navegador não suporta vídeos HTML5.
+    </video>
+    <img class="watermark" src="images/white-logo.png" alt="Marca d'água">
   </div>
 
-  <!-- FOOTER -->
+  <div class="image-container mt-4">
+    <div class="blur">
+    <img src="images/5.webp" alt="Imagem">
+    <img class="watermark" style="max-width: 200px" src="images/white-logo.png" alt="Marca d'água">
+  </div>
+  <div class="image-container mt-4">
+    <div class="blur">
+    <img src="images/6.webp" alt="Imagem">
+    <img class="watermark" style="max-width: 200px" src="images/white-logo.png" alt="Marca d'água">
+  </div>
+  <div class="image-container mt-4">
+    <div class="blur">
+    <img src="images/7.webp" alt="Imagem">
+    <img class="watermark" style="max-width: 200px" src="images/white-logo.png" alt="Marca d'água">
+  </div>
+
+  <div class="stats"><p>82 posts • 49 fotos • 33 vídeos</p></div>
+
   <footer>
-    <a href="#">🔒 DESBLOQUEAR TODOS OS CONTEÚDOS 🔒</a>
+    <a href="https://app.pushinpay.com.br/service/pay/9F01488D-40C2-4B66-B30B-59D4BFBDF531">🔒 DESBLOQUEAR TODOS OS CONTEÚDOS 🔒</a>
   </footer>
+</div>
 
-  <script>
-    const toggleButton = document.getElementById("toggleButton");
-    const profileDetails = document.getElementById("profile-details");
+<script>
+  const toggleButton = document.getElementById("toggleButton");
+  const profileDetails = document.getElementById("profile-details");
 
-    toggleButton.addEventListener("click", () => {
-      if (profileDetails.classList.contains("blurred")) {
-        profileDetails.classList.remove("blurred");
-        toggleButton.textContent = "Ver menos";
-      } else {
-        profileDetails.classList.add("blurred");
-        toggleButton.textContent = "Ver mais";
-      }
-    });
-  </script>
-</body>
-</html>
+  toggleButton.addEventListener("click", function () {
+    if (profileDetails.classList.contains("blurred")) {
+      profileDetails.classList.remove("blurred");
+      toggleButton.textContent = "Ver menos";
+    } else {
+      profileDetails.classList.add("blurred");
+      toggleButton.textContent = "Ver mais";
+    }
+  });
+</script>
