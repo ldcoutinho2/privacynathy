@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy + Chamada | Natasha Steele</title>
-
-  <link rel="icon" type="image/png" href="images/logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/style.css">
-
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -29,106 +20,191 @@
   </noscript>
   <!-- End Meta Pixel Code -->
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy | Nathy Oficial 🔥</title>
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    .badge { background-color: #ff0077; color: white; padding: 2px 8px; border-radius: 9999px; font-size: 12px; animation: blink 1s infinite; }
-    @keyframes blink { 50% { opacity: 0.1; } }
+    body { font-family: "Inter", sans-serif; background: #f3f4f6; }
+    .blurred {
+      filter: blur(6px);
+      position: relative;
+    }
+    .watermark {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      opacity: 0.8;
+      max-width: 120px;
+    }
+    .badge {
+      background-color: red;
+      color: white;
+      padding: 2px 8px;
+      font-size: 12px;
+      border-radius: 9999px;
+      animation: blink 1s infinite;
+      position: absolute;
+      top: -10px;
+      left: 10px;
+    }
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
   </style>
 </head>
-<body class="bg-gray-100">
 
-<!-- Navbar -->
-<nav class="bg-white shadow-md">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="flex justify-center items-center h-16">
-      <img class="h-9 w-auto" src="images/privacy.svg" alt="Logo">
+<body>
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 flex justify-center h-16 items-center">
+      <img class="h-9" src="images/privacy.svg" alt="Logo">
+    </div>
+  </nav>
+
+  <!-- BANNER -->
+  <div class="relative max-w-3xl mx-auto">
+    <img src="images/banner2.png" class="w-full h-64 object-cover">
+    <div class="absolute bottom-4 right-4 text-white">82 posts • 49 fotos • 33 vídeos</div>
+    <div class="absolute -bottom-16 left-6">
+      <img src="images/perfil2.png" class="h-24 w-24 rounded-full border-4 border-white">
     </div>
   </div>
-</nav>
 
-<!-- Banner e Perfil -->
-<div class="relative max-w-3xl mx-auto">
-  <img class="w-full h-64 object-cover" src="images/banner2.png" alt="Banner">
-  <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent"></div>
-  <div class="absolute bottom-4 right-4 text-white">82 posts • 86k likes</div>
-  <div class="absolute -bottom-16 left-6">
-    <img class="h-24 w-24 rounded-full border-4 border-white object-cover" src="images/perfil2.png" alt="Perfil">
-  </div>
-</div>
-
-<div class="max-w-3xl mx-auto mt-16 px-6">
-  <div class="flex items-center">
-    <h2 class="text-lg font-bold text-black">Natasha Steele</h2>
-    <img class="h-5 w-5 ml-2" src="images/badge-check.svg" alt="Verificado">
-  </div>
-  <p class="text-sm text-gray-600">@natasha.stele</p>
-</div>
-
-<!-- Conteúdo -->
-<div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-4">
-  <p class="text-gray-800 text-sm blurred">Meu amor… desbloqueia +800 conteúdos e AINDA uma chamada de vídeo exclusiva comigo... peladinha só pra você. 😈</p>
-  <button id="toggleButton" class="mt-2 text-pink-600 hover:text-pink-700">Ver mais</button>
-
-  <div class="grid grid-cols-2 gap-4 mt-6">
-    <div class="video-container"><div class="blur"><video autoplay muted loop><source src="media/01.mp4" type="video/mp4"></video></div><img class="watermark" src="images/white-logo.png"></div>
-    <div class="video-container"><div class="blur"><video autoplay muted loop><source src="media/02.mp4" type="video/mp4"></video></div><img class="watermark" src="images/white-logo.png"></div>
+  <!-- PERFIL -->
+  <div class="max-w-3xl mx-auto mt-16 px-6">
+    <div class="flex items-center">
+      <h2 class="text-lg font-bold">Nathy Oficial 🔥</h2>
+      <img src="images/badge-check.svg" class="h-5 w-5 ml-2">
+    </div>
+    <p class="text-sm text-gray-600">@nathy.oficial</p>
   </div>
 
-  <div class="grid grid-cols-3 gap-4 mt-4">
-    <div class="image-container"><div class="blur"><img src="images/5.webp"></div><img class="watermark" src="images/white-logo.png"></div>
-    <div class="image-container"><div class="blur"><img src="images/6.webp"></div><img class="watermark" src="images/white-logo.png"></div>
-    <div class="image-container"><div class="blur"><img src="images/7.webp"></div><img class="watermark" src="images/white-logo.png"></div>
-  </div>
+  <!-- DESCRIÇÃO -->
+  <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-4">
+    <p id="profile-details" class="text-sm text-gray-800 blurred">
+      Meu amor... aqui não tem enrolação não 🔥 <br>
+      Desbloqueia agora +800 conteúdos explícitos meus e das minhas amigas: <br>
+      📸 Peladinha, se tocando, fazendo oral, de 4... <br>
+      🎥 Vídeos íntimos, sem censura, sem corte... <br>
+      💻 E ainda tem CHAMADA DE VÍDEO AO VIVO COMIGO 😈 <br>
+      👉 Desbloqueia agora... Para de sonhar e vem me ver peladinha AGORA!
+    </p>
+    <button id="toggleButton" class="mt-2 text-orange-500 hover:text-orange-600">Ver mais</button>
 
-  <!-- Planos -->
-  <h6 class="title-subscribe mt-6">ASSINATURAS + CHAMADA DE VÍDEO 🔥</h6>
-  <div class="space-y-4 mt-2">
-    <a href="https://app.pushinpay.com.br/service/pay/9F225D94-643E-4E38-9AC5-A9D04C56F34D" onclick="fbq('track', 'InitiateCheckout')" class="subscribe-btn">
-      <div class="badge">+Vendido</div>
-      <span>1 mês + chamada de vídeo</span>
-      <span>R$ 14,90</span>
+    <!-- REDES -->
+    <div class="flex space-x-3 mt-4">
+      <a href="#"><img src="images/x.png" class="h-6"></a>
+      <a href="#"><img src="images/instagram.png" class="h-6"></a>
+      <a href="#"><img src="images/tiktok.png" class="h-6"></a>
+    </div>
+
+    <!-- PLANOS -->
+    <br>
+    <h6 class="text-center text-lg font-bold mb-2">ESCOLHA SEU PLANO 🔥</h6>
+
+    <div class="relative">
+      <div class="badge">MAIS VENDIDO</div>
+      <a href="#" class="block bg-orange-500 text-white rounded-lg px-4 py-3 mb-2 text-center" onclick="fbq('track', 'InitiateCheckout')">
+        🔥 1 Mês - R$ 14,90 + Chamada de 5 MIN
+      </a>
+    </div>
+
+    <a href="#" class="block bg-orange-500 text-white rounded-lg px-4 py-3 mb-2 text-center" onclick="fbq('track', 'InitiateCheckout')">
+      🔥 3 Meses - R$ 19,90 + Chamada de 10 MIN
     </a>
-    <a href="https://app.pushinpay.com.br/service/pay/9F25BE2D-AA4B-4F6B-ADD7-F7C9D7BF75D0" onclick="fbq('track', 'InitiateCheckout')" class="subscribe-btn">
-      <span>3 meses + chamada de 5min</span>
-      <span>R$ 19,90</span>
+
+    <a href="#" class="block bg-orange-500 text-white rounded-lg px-4 py-3 mb-2 text-center" onclick="fbq('track', 'InitiateCheckout')">
+      🔥 Vitalício - R$ 39,90 + Chamada Até Gozar
     </a>
-    <a href="https://app.pushinpay.com.br/service/pay/9F25BEA3-981E-4AAA-BEAC-ADF1435F0C3B" onclick="fbq('track', 'InitiateCheckout')" class="subscribe-btn">
-      <span>Vitalício + chamada 10min</span>
-      <span>R$ 39,90</span>
-    </a>
+
+    <div class="stats text-center mt-2"><p>82 posts • 49 fotos • 33 vídeos</p></div>
+
+    <!-- CONTEÚDOS -->
+    <div class="grid mt-4">
+      <div class="relative">
+        <div class="blurred">
+          <video autoplay muted loop>
+            <source src="media/01.mp4" type="video/mp4">
+          </video>
+        </div>
+        <img src="images/white-logo.png" class="watermark">
+      </div>
+
+      <div class="relative">
+        <div class="blurred">
+          <video autoplay muted loop>
+            <source src="media/02.mp4" type="video/mp4">
+          </video>
+        </div>
+        <img src="images/white-logo.png" class="watermark">
+      </div>
+    </div>
+
+    <div class="grid mt-4">
+      <div class="relative">
+        <div class="blurred">
+          <img src="images/5.webp">
+        </div>
+        <img src="images/white-logo.png" class="watermark">
+      </div>
+
+      <div class="relative">
+        <div class="blurred">
+          <img src="images/6.webp">
+        </div>
+        <img src="images/white-logo.png" class="watermark">
+      </div>
+    </div>
+
+    <div class="grid mt-4">
+      <div class="relative">
+        <div class="blurred">
+          <img src="images/7.webp">
+        </div>
+        <img src="images/white-logo.png" class="watermark">
+      </div>
+    </div>
+
+    <!-- COMENTÁRIOS FAKE -->
+    <div class="bg-gray-100 p-4 rounded-lg mt-6">
+      <h3 class="font-bold mb-2">💬 O que estão dizendo...</h3>
+      <p>🔥 "Manooo... vale cada centavo, ela é MUITO gostosa!!!"</p>
+      <p>🔥 "Achei que era fake... quando ela entrou na chamada eu quase gozei na hora 😈"</p>
+      <p>🔥 "Sem palavras... vídeos insanos, e a chamada? Perfeita"</p>
+    </div>
+
+    <footer class="mt-6 text-center">
+      <a href="#">🔒 DESBLOQUEAR TODOS OS CONTEÚDOS 🔒</a>
+    </footer>
   </div>
 
-  <div class="stats mt-6"><p>82 posts • 49 fotos • 33 vídeos</p></div>
+  <script>
+    const toggleButton = document.getElementById("toggleButton");
+    const profileDetails = document.getElementById("profile-details");
+    toggleButton.addEventListener("click", function () {
+      if (profileDetails.classList.contains("blurred")) {
+        profileDetails.classList.remove("blurred");
+        toggleButton.textContent = "Ver menos";
+      } else {
+        profileDetails.classList.add("blurred");
+        toggleButton.textContent = "Ver mais";
+      }
+    });
+  </script>
+</body>
+</html>
 
-  <!-- Comentários -->
-  <div class="bg-gray-100 p-4 rounded-lg mt-6">
-    <p class="text-sm font-bold">O QUE TÃO FALANDO:</p>
-    <ul class="text-xs space-y-2 mt-2">
-      <li>🔥 "Vale cada centavo, ela é PERFEITA!"</li>
-      <li>😈 "Chamada surreal, fiquei doido."</li>
-      <li>💦 "O conteúdo é melhor do que imaginei."</li>
-      <li>😍 "Gozamos juntos na chamada, sem palavras."</li>
-    </ul>
-  </div>
-
-  <footer class="mt-6">
-    <a href="https://app.pushinpay.com.br/service/pay/9F01488D-40C2-4B66-B30B-59D4BFBDF531">🔒 DESBLOQUEAR TODOS OS CONTEÚDOS 🔒</a>
-  </footer>
-</div>
-
-<script>
-  const toggleButton = document.getElementById("toggleButton");
-  const profileDetails = document.getElementById("profile-details");
-  toggleButton.addEventListener("click", function () {
-    if (profileDetails.classList.contains("blurred")) {
-      profileDetails.classList.remove("blurred");
-      toggleButton.textContent = "Ver menos";
-    } else {
-      profileDetails.classList.add("blurred");
-      toggleButton.textContent = "Ver mais";
-    }
-  });
-</script>
 
 </body>
 </html>
